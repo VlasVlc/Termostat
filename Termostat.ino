@@ -139,7 +139,7 @@ void loop() {
   analogWrite(MOSFET, PWM);
 
   //  по моему мнению этого достаточно что бы упрвлять увлажнителем
-  if (humidity > humSet) {    //сравниваем считанную влажность и заданную
+  if (humidity < humSet) {    //сравниваем считанную влажность и заданную
     DigitalWrite(humPin, HIGH); //если меньше включаем
   }
   else {
